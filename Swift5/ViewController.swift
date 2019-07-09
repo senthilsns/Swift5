@@ -34,7 +34,28 @@ class ViewController: UIViewController {
         
         let compactVal = times.compactMapValues {$0}
         print(compactVal)
+        
+        
+        
+        // Example: Generics
+        var number1 = 10
+        var number2 = 20
+        swapfunc(&number1, &number2)
+        print("someInt is now \(number1), and anotherInt is now \(number2)")
+
+        
     }
+    
+    
+    //MARK: Generic Swap Function
+    func swapfunc<T> (_ a: inout T ,_ b: inout T)  {
+      let temp = a
+        a = b
+        b = temp
+    }
+    
+    
+    
 
 
 }
